@@ -20,6 +20,18 @@
             number: 1,
             mindset: "Focused and ready to rock and roll."
           }
+        } 
+
+        increment(event){
+          this.setState({
+            number: this.state.number + 1
+          })
+        }
+
+        decrement(event){
+          this.setState({
+            number: this.state.number - 1
+          })
         }
 
   	    render() {
@@ -29,6 +41,8 @@
               <h1>Mission: {this.props.mission}</h1>
               <h3>Mindset: {this.state.mindset}</h3>
               <h2>Current program: {this.props.label}.</h2>
+              <button onClick={this.increment.bind(this)}>Increment</button>
+              <button onClick={this.decrement.bind(this)}>Decrement</button>
               <h3>Current week: {this.state.number}</h3>
               <p>Current date: {this.props.date.toLocaleDateString()}.</p>
   	  	    </div>
