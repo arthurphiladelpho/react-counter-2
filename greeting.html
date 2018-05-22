@@ -17,10 +17,21 @@
   	  	  return (
   	  	    <div>
   	  	      <h1>Hello World</h1>
+  	  	      <FootNote />
   	  	    </div>
   	  	  );
   	  	}	
 
+  	  }
+
+  	  class FootNote extends React.PureComponent {
+  	    render () {
+  	      return (
+  	      	<div>
+  	      	  <h6>Thank you for joining us.</h6>
+  	      	</div>
+  	      );
+  		}	
   	  }
 
   	  ReactDOM.render(<Greeting />, document.getElementById('app'));
